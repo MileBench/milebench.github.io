@@ -219,7 +219,7 @@
         <h2 class="title is-3">🔔News</h2>
         <div class="content has-text-justified">
           <p>
-            <b>🔥[2023-12-04]: Our evaluation code is now available on <a href="https://github.com/MileBench/MileBench"><b>GitHub</b></a>.</b>
+            <b>🔥[2024-4-30]: Our evaluation code is now available on <a href="https://github.com/MileBench/MileBench"><b>GitHub</b></a>.</b>
           </p>
       </div>      
         <h2 class="title is-3">Introduction</h2>
@@ -232,6 +232,15 @@
             The former explores the long-context recall abilities of MLLMs, using needle-in-a-haystack and image retrieval tasks, 
             while the latter stress-tests the model in a manner akin to real-world conditions using both temporal multi-image tasks and semantic multi-image tasks.
           </p>
+          
+        <div class="content has-text-centered">
+          <img src="static/images/first.png" alt="geometric reasoning" width="90%"/>
+          <p>
+            MLLMs' performance fluctuates with the image count in datasets. 
+            Open-source MLLMs demonstrate a remarkable performance drop as the number of images increases. 
+            The performance divergence between open-source and closed-source MLLMs expands as well. 
+            For single-image performance, we refer to SEED-Bench, given its absence in MileBench.</p>
+        </div>
           <p>
             After evaluating 20 models, the closed-source Gemini 1.5 excelled in the realistic evaluation, achieving an impressive score of 54.7%, 
             though it still falls short of a perfect 100% score. 
@@ -317,7 +326,11 @@
           </p>
           <div class="content has-text-centered">
             <img src="static/images/comparison.png" alt="comparison" class="center">
-            <p> Visualization of Image and Words Quantity Distribution in Present MLLM Benchmarks</p>
+            <p>
+              Visualization of distribution of images and word number in present MLLM benchmarks. 
+              The range and mean of both word and image number per sample in MileBench far exceed those of previous works.
+            </p>
+            
           </div>
         </div>
       </div>
@@ -377,10 +390,10 @@
           <p> 
             Experiment Result on MileBench. T-1 refers to the task number. 
             NH and IR refers to Needle in a Haystack and Image Retrieval. 
-            The highest score for <span style="color:red;">closed-source models</span>, 
+            The highest scores for <span style="color:red;">closed-source models</span>, 
             <span style="color:blue;">open-source image models</span>, 
             and <span style="color:green;">open-source video models</span> 
-            is marked in red, blue, and green respectively.
+            are marked in red, blue, and green respectively.
           </p>
           <div class="content has-text-justified">
             <p>
@@ -482,7 +495,12 @@
         </div>
         <div class="content has-text-centered">
           <img src="static/images/needle.png" alt="Result" class="center">
-          <p>Visualization of results varying in depth and context length in needle haystack.</p>
+          <p>
+            Visualization of results varying in depth and context length in needle haystack. 
+            The x-axis represents the number of tokens or images in the context, while the 
+            y-axis indicates the depth of the context where the needle resides. Green squares 
+            indicate successful extraction of the needle at that position, while red squares denote failure.
+          </p>
         </div>
       </div>
     </div>
@@ -510,7 +528,16 @@
       </div>
     </div>
 
-<!-------------------------------------------------------------------- RESULTS SECTION -------------------------------------------------------------------->
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Other Analysis</h2>
+        <p>
+          For more analysis, please refer to our paper.
+        </p>
+      </div>
+    </div>
+
+<!-------------------------------------------------------------------- RESULTS SECTION END -------------------------------------------------------------------->
 
 
   </div>
